@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diyorbek Qadamboyev | Frontend Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: { accent: '#a78bfa' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #080810; }
+    .gradient-text {
+      background: linear-gradient(90deg,#a78bfa,#38bdf8);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .glow { box-shadow: 0 0 50px rgba(139,92,246,.12); }
+    .glass {
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(15px);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: .7s ease;
+    }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans selection:bg-purple-500">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full z-50 bg-[#080810]/80 backdrop-blur-xl border-b border-white/5">
+  <nav class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="#" class="text-2xl font-extrabold tracking-tight">
+      D<span class="gradient-text">.</span>
+    </a>
+
+    <div class="hidden md:flex gap-8 text-sm text-gray-400">
+      <a href="#home" class="hover:text-purple-400">Bosh sahifa</a>
+      <a href="#about" class="hover:text-purple-400">Men haqimda</a>
+      <a href="#skills" class="hover:text-purple-400">Ko‘nikmalar</a>
+      <a href="#projects" class="hover:text-purple-400">Loyihalar</a>
+      <a href="#contact" class="hover:text-purple-400">Bog‘lanish</a>
+    </div>
+
+    <a href="#contact" class="hidden md:block px-5 py-2.5 rounded-full bg-purple-500 hover:bg-purple-600 text-sm font-semibold transition">
+      Bog‘lanish ↗
+    </a>
+
+    <button id="menuBtn" class="md:hidden text-2xl" aria-label="Menyuni ochish">☰</button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden px-6 pb-5 space-y-4 text-gray-300">
+    <a class="block" href="#home">Bosh sahifa</a>
+    <a class="block" href="#about">Men haqimda</a>
+    <a class="block" href="#skills">Ko‘nikmalar</a>
+    <a class="block" href="#projects">Loyihalar</a>
+    <a class="block" href="#contact">Bog‘lanish</a>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center pt-24 px-6 relative overflow-hidden">
+  <div class="absolute w-96 h-96 bg-purple-600/15 blur-[120px] rounded-full top-20 -left-40"></div>
+  <div class="absolute w-96 h-96 bg-blue-500/10 blur-[120px] rounded-full bottom-0 right-0"></div>
+
+  <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-14 items-center relative z-10">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm text-gray-300 mb-8">
+        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+        Salom! Men Frontend dasturchiman
+      </div>
+
+      <p class="text-gray-400 text-lg mb-3">Mening ismim</p>
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+        Diyorbek <span class="gradient-text">Qadamboyev</span>
+      </h1>
+
+      <h2 class="text-2xl md:text-3xl text-gray-300 mt-6">
+        Frontend <span class="gradient-text font-bold">Developer</span>
+      </h2>
+
+      <p class="text-gray-400 leading-8 mt-6 max-w-lg">
+        Men zamonaviy, chiroyli va foydalanuvchilar uchun qulay
+        web saytlar yarataman. G‘oyalarni raqamli tajribaga aylantiraman.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mt-9">
+        <a href="#projects" class="px-7 py-4 rounded-xl bg-purple-500 hover:bg-purple-600 font-semibold transition glow">
+          Loyihalarimni ko‘rish ↗
+        </a>
+        <a href="#contact" class="px-7 py-4 rounded-xl glass hover:bg-white/10 transition">
+          Men bilan bog‘lanish
+        </a>
+      </div>
+
+      <div class="flex gap-6 mt-12 text-gray-400 text-sm">
+        <a href="https://github.com/" target="_blank" class="hover:text-white">GitHub ↗</a>
+        <a href="https://t.me/" target="_blank" class="hover:text-white">Telegram ↗</a>
+        <a href="https://linkedin.com/" target="_blank" class="hover:text-white">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="reveal flex justify-center">
+      <div class="relative w-72 h-72 md:w-96 md:h-96">
+        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 blur-3xl opacity-20"></div>
+        <div class="absolute inset-4 rounded-[45%] border border-purple-400/30 rotate-12"></div>
+        <div class="absolute inset-8 rounded-[45%] border border-blue-400/30 -rotate-12"></div>
+        <div class="absolute inset-12 rounded-[35%] glass flex items-center justify-center glow">
+          <div class="text-center">
+            <div class="text-8xl font-black gradient-text">D.</div>
+            <p class="text-gray-400 mt-3 tracking-[5px] text-xs">DEVELOPER</p>
+          </div>
+        </div>
+        <div class="absolute -right-2 top-12 glass rounded-xl p-4">
+          <span class="text-2xl">💻</span>
+          <p class="text-xs text-gray-400 mt-1">Frontend</p>
+        </div>
+        <div class="absolute -left-5 bottom-16 glass rounded-xl p-4">
+          <span class="text-2xl">⚡</span>
+          <p class="text-xs text-gray-400 mt-1">Creative</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-28 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <p class="text-purple-400 text-sm font-semibold tracking-widest">01 / MEN HAQIMDA</p>
+      <h2 class="text-4xl md:text-5xl font-bold mt-4">Men haqimda<span class="gradient-text">.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="glass rounded-3xl p-8 md:p-10 reveal">
+        <h3 class="text-2xl font-bold mb-5">Salom, men Diyorbek!</h3>
+        <p class="text-gray-400 leading-8">
+          Men Frontend dasturchiman. Web texnologiyalariga qiziqaman
+          va doim yangi bilimlarni o‘rganishga intilaman.
+          Maqsadim — sifatli, tezkor va zamonaviy web ilovalar yaratish.
+        </p>
+        <p class="text-gray-400 leading-8 mt-4">
+          Har bir loyihada dizayn, qulaylik va sifatga alohida e'tibor beraman.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 reveal">
+        <div class="glass rounded-2xl p-7">
+          <div class="text-4xl mb-3">🎨</div>
+          <h3 class="font-bold">Creative Design</h3>
+          <p class="text-gray-500 text-sm mt-2">Zamonaviy interfeyslar</p>
+        </div>
+        <div class="glass rounded-2xl p-7">
+          <div class="text-4xl mb-3">📱</div>
+          <h3 class="font-bold">Responsive</h3>
+          <p class="text-gray-500 text-sm mt-2">Barcha qurilmalar uchun</p>
+        </div>
+        <div class="glass rounded-2xl p-7">
+          <div class="text-4xl mb-3">⚡</div>
+          <h3 class="font-bold">Fast Coding</h3>
+          <p class="text-gray-500 text-sm mt-2">Tezkor va sifatli kod</p>
+        </div>
+        <div class="glass rounded-2xl p-7">
+          <div class="text-4xl mb-3">🚀</div>
+          <h3 class="font-bold">Development</h3>
+          <p class="text-gray-500 text-sm mt-2">Doimiy rivojlanish</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-28 px-6 bg-white/[0.015]">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <p class="text-purple-400 text-sm font-semibold tracking-widest">02 / SKILLS</p>
+      <h2 class="text-4xl md:text-5xl font-bold mt-4">Mening ko‘nikmalarim<span class="gradient-text">.</span></h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">🌐</div>
+        <h3 class="font-bold">HTML5</h3>
+        <p class="text-gray-500 text-sm mt-2">Web structure</p>
+      </div>
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">🎨</div>
+        <h3 class="font-bold">CSS3</h3>
+        <p class="text-gray-500 text-sm mt-2">Web styling</p>
+      </div>
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">⚡</div>
+        <h3 class="font-bold">JavaScript</h3>
+        <p class="text-gray-500 text-sm mt-2">Web interaction</p>
+      </div>
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">💨</div>
+        <h3 class="font-bold">Tailwind CSS</h3>
+        <p class="text-gray-500 text-sm mt-2">Modern styling</p>
+      </div>
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">⚛️</div>
+        <h3 class="font-bold">React</h3>
+        <p class="text-gray-500 text-sm mt-2">UI development</p>
+      </div>
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">🐙</div>
+        <h3 class="font-bold">GitHub</h3>
+        <p class="text-gray-500 text-sm mt-2">Version control</p>
+      </div>
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">🖌️</div>
+        <h3 class="font-bold">Figma</h3>
+        <p class="text-gray-500 text-sm mt-2">UI / UX Design</p>
+      </div>
+      <div class="glass p-7 rounded-2xl text-center hover:-translate-y-2 transition reveal">
+        <div class="text-5xl mb-4">📱</div>
+        <h3 class="font-bold">Responsive</h3>
+        <p class="text-gray-500 text-sm mt-2">Mobile friendly</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-28 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-14">
+      <p class="text-purple-400 text-sm font-semibold tracking-widest">03 / PORTFOLIO</p>
+      <h2 class="text-4xl md:text-5xl font-bold mt-4">Mening loyihalarim<span class="gradient-text">.</span></h2>
+      <p class="text-gray-500 mt-4">Bu yerga o‘zingiz yaratgan loyihalarni joylashtiring.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="glass rounded-3xl overflow-hidden group reveal">
+        <div class="h-48 bg-gradient-to-br from-purple-600 to-indigo-900 flex items-center justify-center text-6xl group-hover:scale-105 transition">🛍️</div>
+        <div class="p-6">
+          <p class="text-purple-400 text-xs">01 / WEB DESIGN</p>
+          <h3 class="text-xl font-bold mt-3">Online Shopping</h3>
+          <p class="text-gray-500 text-sm mt-3">Zamonaviy internet do‘kon dizayni.</p>
+          <a href="#" class="inline-block mt-5 text-purple-400 text-sm">Loyihani ko‘rish ↗</a>
+        </div>
+      </div>
+      <div class="glass rounded-3xl overflow-hidden group reveal">
+        <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-900 flex items-center justify-center text-6xl group-hover:scale-105 transition">📊</div>
+        <div class="p-6">
+          <p class="text-blue-400 text-xs">02 / DASHBOARD</p>
+          <h3 class="text-xl font-bold mt-3">Admin Dashboard</h3>
+          <p class="text-gray-500 text-sm mt-3">Professional boshqaruv paneli.</p>
+          <a href="#" class="inline-block mt-5 text-blue-400 text-sm">Loyihani ko‘rish ↗</a>
+        </div>
+      </div>
+      <div class="glass rounded-3xl overflow-hidden group reveal">
+        <div class="h-48 bg-gradient-to-br from-pink-500 to-purple-900 flex items-center justify-center text-6xl group-hover:scale-105 transition">💼</div>
+        <div class="p-6">
+          <p class="text-pink-400 text-xs">03 / PORTFOLIO</p>
+          <h3 class="text-xl font-bold mt-3">Personal Website</h3>
+          <p class="text-gray-500 text-sm mt-3">Shaxsiy portfolio web sayti.</p>
+          <a href="#" class="inline-block mt-5 text-pink-400 text-sm">Loyihani ko‘rish ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28 px-6 bg-white/[0.015]">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <p class="text-purple-400 text-sm font-semibold tracking-widest">04 / CONTACT</p>
+    <h2 class="text-4xl md:text-6xl font-extrabold mt-6">
+      Birgalikda <span class="gradient-text">ishlaymizmi?</span>
+    </h2>
+    <p class="text-gray-400 mt-6 max-w-xl mx-auto leading-8">
+      Sizda qiziqarli loyiha yoki taklif bormi?
+      Men bilan bog‘laning. Birgalikda ajoyib ishlar yaratamiz!
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4 mt-10">
+      <a href="https://t.me/" target="_blank" class="px-8 py-4 rounded-xl bg-purple-500 hover:bg-purple-600 font-semibold transition">
+        Telegram ↗
+      </a>
+      <a href="mailto:yourmail@gmail.com" class="px-8 py-4 rounded-xl glass hover:bg-white/10 transition">
+        Email yozish ↗
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-white/5 py-8 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <a href="#" class="text-xl font-extrabold">D<span class="gradient-text">.</span></a>
+    <p class="text-gray-500 text-sm">© 2026 Diyorbek Qadamboyev. Barcha huquqlar himoyalangan.</p>
+    <a href="#home" class="text-gray-400 hover:text-white text-sm">Yuqoriga ↑</a>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
